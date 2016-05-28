@@ -3,13 +3,17 @@
 ### 代码制作安装包
 直接启动`Fetcher`,然后在命令行中输入需要制作安装包的路径即可。 
 
-程序中默认使用的是`3.0.9.0`版本。如需要下载其他版本，直接修改该版本号即可，注意使用`_`代替`.`即可。
-
-如果不知道版本号，则可以先随意指定一个版本号，然后运行`Fetcher`,会在输出目录下载`GitHub.application`,然后直接运行该文件，如果遇到网络问题则会出现错误日志，查看该错误日志就可以看到GitHub最新版本号。
-
-同样也可以从GitHub官网上查看; https://desktop.github.com/release-notes/windows/ ，只需要在对应版本号后面加`_0`即可
+`Fetcher`会将最新版本进行下载。如果只想获取所有相关文件的下载路径，然后使用其他方式，如下载工具下载，则可以修改`Fetcher`的工作模式为`SHOW_URL`：
+```
+private Mode mode = Mode.SHOW_URL;
+```
+在`SHOW_URL`模式下，只会打印出需要下载文件的链接。注意：文件会分两个目录。除了启动入口：`GitHub.application`文件在github安装根目录下，其他所有文件应该在：github安装目录/Application Files/GitHub_{版本号(逗号换成了下划线)}
 
 ### 真麻烦，我要直接下载
 如果需要直接下载`v3.0.9.0`版本
 * 可以直接到release中下载: https://github.com/gavincook/githubOfflineInstaller/releases/tag/3.0.9.0
 * 如果下载速度慢，可以使用百度云盘的下载地址：http://pan.baidu.com/s/1eRqx0nK
+
+如果需要直接下载`v3.1.1.4`版本
+* 可以直接到release中下载: https://github.com/gavincook/githubOfflineInstaller/releases/tag/3.1.1.4
+* 如果下载速度慢，可以使用百度云盘的下载地址：http://pan.baidu.com/s/1pLeT3YF
