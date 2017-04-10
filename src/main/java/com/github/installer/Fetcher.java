@@ -306,7 +306,13 @@ public class Fetcher {
             byte[] data = new byte[10240];
             int length;
             while((length = in.read(data)) != -1){
-                out.write(data, 0, length);
+                int beginIndex = 0;
+                if(length >= 3){//移除bom
+                    if(data[0] == -17 && data[1] == -69 && data[2] == -65){
+                        beginIndex = 3;
+                    }
+                }
+                out.write(data, beginIndex, length - beginIndex);
             }
         }finally {
             in.close();
