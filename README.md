@@ -17,3 +17,6 @@ private Mode mode = Mode.SHOW_URL;
 如果需要直接下载`v3.1.1.4`版本
 * 可以直接到release中下载: https://github.com/gavincook/githubOfflineInstaller/releases/tag/3.1.1.4
 * 如果下载速度慢，可以使用百度云盘的下载地址：http://pan.baidu.com/s/1pLeT3YF
+
+如果需要直接下载`v3.3.4.0`版本
+* 可以直接到release中下载: https://github.com/gavincook/githubOfflineInstaller/releases/tag/3.3.4.0
